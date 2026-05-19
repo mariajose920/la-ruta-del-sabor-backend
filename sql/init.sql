@@ -26,7 +26,7 @@ CREATE TABLE platos (
   descripcion TEXT,
   precio DECIMAL(10,2),
   restaurante_id INT,
-  FOREIGN KEY (restaurante_id) REFERENCES restaurantes(id)
+  FOREIGN KEY (restaurante_id) REFERENCES restaurantes(id) ON DELETE CASCADE
 );
 
 CREATE TABLE equipos (
@@ -34,7 +34,7 @@ CREATE TABLE equipos (
   nombre VARCHAR(100) NOT NULL,
   cargo VARCHAR(100),
   restaurante_id INT,
-  FOREIGN KEY (restaurante_id) REFERENCES restaurantes(id)
+  FOREIGN KEY (restaurante_id) REFERENCES restaurantes(id) ON DELETE CASCADE
 );
 
 INSERT INTO categorias (nombre) VALUES
