@@ -65,3 +65,7 @@ DB_NAME=ruta_del_sabor
 ```
 
 3. Importa o ejecuta el archivo `sql/init.sql` en tu gestor de base de datos para crear la estructura de las tablas, relaciones y cargar los datos semilla de prueba.
+
+OK
+
+
