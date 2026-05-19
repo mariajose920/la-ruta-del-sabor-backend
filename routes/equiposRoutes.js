@@ -1,8 +1,18 @@
 const express = require('express');
 const router = express.Router();
 
-const { getEquipos } = require('../controllers/equiposController');
+const {
+    getEquipos,
+    getEquipoById,
+    createEquipo,
+    updateEquipo,
+    deleteEquipo
+} = require('../controllers/equiposController');
 
 router.get('/', getEquipos);
+router.get('/:id', getEquipoById);
+router.post('/', createEquipo);
+router.put('/:id', updateEquipo);
+router.delete('/:id', deleteEquipo);
 
 module.exports = router;

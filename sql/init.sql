@@ -1,12 +1,17 @@
 CREATE DATABASE IF NOT EXISTS ruta_del_sabor;
 USE ruta_del_sabor;
 
-CREATE TABLE IF NOT EXISTS categorias (
+DROP TABLE IF EXISTS equipos;
+DROP TABLE IF EXISTS platos;
+DROP TABLE IF EXISTS restaurantes;
+DROP TABLE IF EXISTS categorias;
+
+CREATE TABLE categorias (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS restaurantes (
+CREATE TABLE restaurantes (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(150) NOT NULL,
   direccion VARCHAR(255),
@@ -15,7 +20,7 @@ CREATE TABLE IF NOT EXISTS restaurantes (
   FOREIGN KEY (categoria_id) REFERENCES categorias(id)
 );
 
-CREATE TABLE IF NOT EXISTS platos (
+CREATE TABLE platos (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(150) NOT NULL,
   descripcion TEXT,
@@ -24,7 +29,7 @@ CREATE TABLE IF NOT EXISTS platos (
   FOREIGN KEY (restaurante_id) REFERENCES restaurantes(id)
 );
 
-CREATE TABLE IF NOT EXISTS equipos (
+CREATE TABLE equipos (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
   cargo VARCHAR(100),
