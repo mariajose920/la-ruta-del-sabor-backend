@@ -1,12 +1,19 @@
 {
   "name": "la-ruta-del-sabor-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend API REST del sistema La Ruta del Sabor con Node.js, Express y MySQL",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "express",
+    "mysql",
+    "api",
+    "backend"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
